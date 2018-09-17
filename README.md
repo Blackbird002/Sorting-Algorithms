@@ -15,3 +15,7 @@ A sorting algorithm (aka in-place comparison sort). Algorithm divides the input 
 A simple sorting algorithm that builds the final sorted array/list one item at a time. 
 <br>
 <b>Time Complexity:</b> O(n^2)
+
+# QuickSort
+<br>
+<b>Time Complexity:</b> 
