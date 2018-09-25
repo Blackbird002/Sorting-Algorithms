@@ -35,11 +35,10 @@ void printArray(int array[], const int &arraySize){
 }
 
 /*
-    A - Array A
-    B - Array B
+    A - Array A (the array we send to function)
+    B - Array B (we build this array)
     sizeA - size of A
-    sizeB - size of B
-    k - range for 0 to k, for some integer k
+    k - range from 0 to k, for some integer k
 */
 void countingSort(int A[], const int &sizeA, const int &k){
     //Create array C of size k
