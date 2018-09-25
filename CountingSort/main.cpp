@@ -9,11 +9,15 @@ void countingSort(int A[], const int &sizeA, const int &k);
 
 int main(void){
 
-    int ary1[10] = {2,5,3,0,2,3,0,3};
+    int arraySize = 12;
+    int ary1[arraySize] = {55,23,14,5,38,17,36,99,51,74,64,31};
     std::cout<<"Counting Sort \n";
-    printArray(ary1,8);
-    countingSort(ary1,8, 5);
-    printArray(ary1,8);
+    std::cout<<"Before: " <<std::endl;
+    printArray(ary1,arraySize);
+    countingSort(ary1,arraySize, 99);
+    std::cout<<std::endl;
+    std::cout<<"After: " <<std::endl;
+    printArray(ary1,arraySize);
 
     //Wait for user to press enter
     std::cin.ignore();
@@ -60,12 +64,12 @@ void countingSort(int A[], const int &sizeA, const int &k){
 
     C[X] = C[x] - 1
     */
-    for(int j = sizeA-1; j > 0; j--){
+    for(int j = sizeA-1; j >= 0; j--){
         B[C[A[j]]-1] = A[j];
         C[A[j]] = C[A[j]] - 1;
     }
 
     //Copies the sorted array back to A
     for(int i = 0; i < sizeA; i++)
-        B[i] = A[i];
+        A[i] = B[i];
 }
