@@ -28,7 +28,5 @@ A partition/exchange sort with two "bins": A less than bin and a greater than bi
 Variable j starts left of the list/array. Variable k starts at the right.
 Variable j and k are compared to the pivot.
 Quicksort then recursively sorts the sub-arrays.
-
-
 <br>
 **Time Complexity:** O(nlog(n))
