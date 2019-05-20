@@ -4,17 +4,19 @@ Various sorting algorithms that I have encountered in Computer Science
 ## BubbleSort
 The simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order (aka sinking sort).
 <br>
-**Time Complexity:** O(n^2)
+**Time Complexity:** O(n^2) worst case
 
 ## SelectionSort
 A sorting algorithm (aka in-place comparison sort). Algorithm divides the input into two parts: a sub-list of items already sorted and a sub-list of items remaining to be sorted.
+It does not adapt to the data in any way. 
 <br>
 **Time Complexity:** O(n^2)
 
 ## InsertionSort
-A simple sorting algorithm that builds the final sorted array/list one item at a time. 
+A simple sorting algorithm that builds the final sorted array/list one item at a time.
+- Algorithm of choice if data is **nearly sorted**
 <br>
-**Time Complexity:** O(n^2)
+**Time Complexity:** O(n^2) worst case
 
 ## CountingSort
 Uses supplied information about the range of numbers from 0 to k in the array. 
