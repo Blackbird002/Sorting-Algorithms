@@ -15,9 +15,8 @@ It does not adapt to the data in any way.
 ## InsertionSort
 A simple sorting algorithm that builds the final sorted array/list one item at a time.
 - Algorithm of choice if data is **nearly sorted**
-
 <br>
-**Time Complexity:** O(n^2) worst case
+_Time Complexity:_ O(n^2) worst case
 
 ## CountingSort
 Uses supplied information about the range of numbers from 0 to k in the array. 
