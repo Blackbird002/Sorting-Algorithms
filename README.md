@@ -13,10 +13,12 @@ It does not adapt to the data in any way.
 **Time Complexity:** O(n^2)
 
 ## InsertionSort
-A simple sorting algorithm that builds the final sorted array/list one item at a time.
+A simple sorting algorithm that builds the final sorted array/list one item at a time. It's an efficient algorithm for sorting a small number of elements. Uses to the **incremental approach**.
 - Algorithm of choice if data is **nearly sorted**
-<br>
-Time Complexity: O(n^2) worst case
+- Uses a loop invaraint
+- Best case: array is **already sorted**
+- Worst case: array is in **reverse order**
+- Time Complexity: **O(n^2)** worst case
 
 ## CountingSort
 Uses supplied information about the range of numbers from 0 to k in the array. 
