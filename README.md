@@ -38,8 +38,6 @@ Sort that follows the **divide-and-conquer approach:**
 2. **Conquer**: Sorts the two subsequences recursively using merge sort
 3. **Combine**: Merges the two sorted subsequences
 Algorithm (Introduction to Algorithms 3rd Edition - Cormen, Leiserson, Rivest, Stein):
-<br>
-Merge auxiliary function:
 ```
 Merge(A,p,q,r)
   n1 = q - p + 1
@@ -61,8 +59,7 @@ Merge(A,p,q,r)
       A[k] = R[j]
       j = j + 1
 ```
-Merge Sort:
-<br>
+
 ```
 MergeSort(A,p,r)
   if p < r
