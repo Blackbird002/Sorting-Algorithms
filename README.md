@@ -14,7 +14,7 @@ It does not adapt to the data in any way.
 
 ## Insertion Sort
 A simple sorting algorithm that builds the final sorted array/list one item at a time. It's an efficient algorithm for sorting a small number of elements. Uses the **incremental approach**.
-<br>
+
 Algorithm (Introduction to Algorithms 3rd Edition - Cormen, Leiserson, Rivest, Stein):
 ```
 Insertion-Sort(A)
