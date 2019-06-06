@@ -13,7 +13,19 @@ It does not adapt to the data in any way.
 **Time Complexity:** O(n^2)
 
 ## InsertionSort
-A simple sorting algorithm that builds the final sorted array/list one item at a time. It's an efficient algorithm for sorting a small number of elements. Uses to the **incremental approach**.
+A simple sorting algorithm that builds the final sorted array/list one item at a time. It's an efficient algorithm for sorting a small number of elements. Uses the **incremental approach**.
+<br>
+Algorithm (Introduction to Algorithms 3rd Edition - Cormen, Leiserson, Rivest, Stein):
+```
+Insertion-Sort(A)
+  for j = 2 to A.length
+    key = A[j];
+    i = j - 1
+    while i > 0 and A[i] > key
+      A[i + 1] = A[i]
+      i = i - 1
+    A[i + 1] = key
+```
 - Algorithm of choice if data is **nearly sorted**
 - Uses a loop invaraint
 - Best case: array is **already sorted**
