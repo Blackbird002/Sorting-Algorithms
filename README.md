@@ -37,6 +37,7 @@ Sort that follows the **divide-and-conquer approach:**
 1. **Divide**: Devides n-element sequence to be sorted into 2 subsequences of n/2
 2. **Conquer**: Sorts the two subsequences recursively using merge sort
 3. **Combine**: Merges the two sorted subsequences
+<br>
 Algorithm (Introduction to Algorithms 3rd Edition - Cormen, Leiserson, Rivest, Stein):
 ```
 Merge(A,p,q,r)
