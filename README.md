@@ -38,7 +38,7 @@ Insertion-Sort(A)
     A[i + 1] = key
 ```
 - Algorithm of choice if data is **nearly sorted**
-- Uses a loop invaraint
+- Uses a loop invaraint: At the start of each iteration of the for loop, the subarray A[1..j-1] consisits of the elements originally in A[1..j-1], but it's sorted.
 - Best case: array is **already sorted**
 - Worst case: array is in **reverse order**
 - Time Complexity: **O(n^2)** worst case
