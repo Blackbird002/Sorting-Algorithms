@@ -4,47 +4,42 @@ Bubble Sort C++ implementation
 */
 
 #include <iostream>
+#include <cassert>
 
-void swap(int &num1, int &num2);
-void bubbleSort(int array[], const int &arraySize);
-void printArray(int array[], const int &arraySize);
-
-int main(void){
-
-    int ary1[10] = {9,4,2,5,7,8,1,0,6,3};
-    std::cout<<"Bubble Sort \n";
-    std::cout<<"Array: { 9,4,2,5,7,8,1,0,6,3 } \n";
-    bubbleSort(ary1,10);
-    printArray(ary1,10);
-    std::cin.ignore();
-
-    return 0;
+template <class T>
+void compareArray(int actual[], int expected[], const int& n) {
+	for (int i = 0; i < n; i++)
+		assert(actual[i] == expected[i]);
 }
 
-//Swaps two given array elements
-void swap(int &num1, int &num2){
-    double temp = num1;
-    num1 = num2;
-    num2 = temp;
+template <class T>
+void swap(T& num1, T& num2) {
+	T temp = num1;
+	num1 = num2;
+	num2 = temp;
 }
 
-void printArray(int array[], const int &arraySize){
-    std::cout<<"After sorting (using Bubble Sort): ";
-    std::cout<<"{ ";
-    for(int i = 0; i < arraySize; i++){
-        std::cout<<array[i] <<" ";
-    }
-    std::cout<<"}";
+template <class T>
+void bubbleSort(T array[], const int& arraySize) {
+	int i, j;
+	for (i = 0; i < arraySize - 1; i++) {
+		for (j = 0; j < arraySize - 1; j++) {
+			if (array[j] > array[j + 1])
+				swap(array[j], array[j + 1]);
+		}
+	}
 }
 
-//Bubble Sort Algorithm
-void bubbleSort(int array[], const int &arraySize){
-    int i,j;
-    for (i = 0; i < arraySize-1; i++){
-        for(j = 0; j < arraySize-1; j++){
-            if(array[j] > array[j+1]){
-                swap(array[j], array[j+1]);
-            }
-        }
-    }
+void testBubbleSort() {
+	int actual[10] = { 9,4,2,5,7,8,1,0,6,3 };
+	int expected[10] = { 0,1,2,3,4,5,6,7,8,9 };
+	bubbleSort<int>(actual, 10);
+	compareArray<int>(actual, expected, 10);
+	std::cout << "Bubble Sort Test passed!\n";
+}
+
+int main(void) {
+	std::cout << "Bubble Sort \n";
+	testBubbleSort();
+	return 0;
 }
