@@ -81,8 +81,8 @@ MergeSort(A,p,r)
     MergeSort(A,q+1,r)
     Merge(A,p,q,r);
 ```
-- Since it's recursive, we need to use a **recurrence equation** to describe running time of on a problem of size n 
-- Running Time: **O(n lg n)***
+- Since it's recursive, we need to use a **recurrence equation** to describe running time of a problem of size n 
+- Running Time: **O(n lg n)**
 
 ## Counting Sort
 Uses supplied information about the range of numbers from 0 to k in the array. 
