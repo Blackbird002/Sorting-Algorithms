@@ -2,8 +2,19 @@
 Various sorting algorithms that I have encountered in Computer Science
 
 ## Bubble Sort
-The simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order (aka sinking sort).
-<br>
+The simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+It is very popular (easy to remember), but inefficient.
+
+Algorithm (Introduction to Algorithms 3rd Edition - Cormen, Leiserson, Rivest, Stein):
+
+```
+BubbleSort(A)
+  for i = 1 to A.length - 1
+    for j = A.length downto i + 1
+      if A[j] < A[j-1]
+        exchange A[j] with A[j-1]
+```
+
 **Time Complexity:** O(n^2) worst case
 
 ## Selection Sort
