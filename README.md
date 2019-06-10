@@ -1,6 +1,11 @@
 # Sorting-Algorithms
 Various sorting algorithms that I have encountered in Computer Science
 
+## Terminology:
+- **Loop Invariant**: any condition or value of any variable that must be true before and after each iteration of any loop
+- **In place** sort: rearranges the numbers/objects within the array
+
+
 ## Bubble Sort
 The simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
 It is very popular (easy to remember), but inefficient.
@@ -41,7 +46,7 @@ Insertion-Sort(A)
 - Uses a **loop invariant**: At the start of each iteration of the for loop, the subarray A[1..j-1] consists of the elements originally in A[1..j-1], but it's sorted.
 - Best case: array is **already sorted**
 - Worst case: array is in **reverse order**
-- **In place** sort: rearranges the numbers/objects within the array
+- **In place** sort
 - Time Complexity: **O(n^2)** worst case
 
 ## Merge Sort
