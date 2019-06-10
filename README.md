@@ -84,6 +84,8 @@ MergeSort(A,p,r)
 - Since it's recursive, we need to use a **recurrence equation** to describe running time of a problem of size n 
 - Running Time: **O(n lg n)**
 
+![Recursive Tree](https://github.com/Blackbird002/Sorting-Algorithms/blob/master/Docs/Images/mergeSortRecTree.jpg)
+
 ## Counting Sort
 Uses supplied information about the range of numbers from 0 to k in the array. 
 It determines for each element in the array x, the number of elements that are less than x.
