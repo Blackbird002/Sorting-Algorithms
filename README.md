@@ -24,7 +24,7 @@ It does not adapt to the data in any way.
 **Time Complexity:** O(n^2)
 
 ## Insertion Sort
-A simple sorting algorithm that builds the final sorted array/list one item at a time. It's an efficient algorithm for sorting a small number of elements. Uses the **incremental approach**.
+A simple sorting algorithm that builds the final sorted array/list one item at a time. It's an efficient algorithm for sorting a small number of elements. Uses the **incremental approach**. Since we have a sorted subarray A[1...j-1], we insert a single element A[j] into the proper place which results in the sorted subarray A[1..j].
 
 Algorithm (Introduction to Algorithms 3rd Edition - Cormen, Leiserson, Rivest, Stein):
 ```
