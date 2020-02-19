@@ -3,7 +3,10 @@ Various sorting algorithms that I have encountered in Computer Science
 
 ## Terminology:
 - **Loop Invariant**: any condition or value of any variable that must be true before and after each iteration of any loop
-- **In place** sort: rearranges the numbers/objects within the array
+1. **Initialization**: It is true prior to the first iteration of the loop
+2. **Maintenance**: If it is true before an iteration of the loop, it remains true before the next iteration
+3. **Termination**: When the loop terminates, the invariant gives us a useful property that helps show the correctless of the algorithm
+- **In place sort**: rearranges the numbers/objects within the array
 
 
 ## Bubble Sort
@@ -89,7 +92,7 @@ MergeSort(A,p,r)
 - Since it's recursive, we need to use a **recurrence equation** to describe running time of a problem of size n 
 - Running Time: **O(n lg n)**
 
-![Recursive Tree](https://github.com/Blackbird002/Sorting-Algorithms/blob/master/Docs/Images/mergeSortRecTree.jpg)
+![Recursive Tree](/Docs/Images/mergeSortRecTree.jpg)
 
 ## Counting Sort
 Uses supplied information about the range of numbers from 0 to k in the array. 
@@ -99,9 +102,33 @@ It then uses that information to place the element x directly into position in a
 **Time Complexity:** O(n + k)
 
 ## Quick Sort
-A partition/exchange sort with two "bins": A less than bin and a greater than bin.
-Variable j starts left of the list/array. Variable k starts at the right.
-Variable j and k are compared to the pivot.
-Quicksort then recursively sorts the sub-arrays.
-<br>
-**Time Complexity:** O(nlog(n))
+Sort that follows the **divide-and-conquer approach:**
+1. **Divide**: Partition the array A[p..r] into two subarrays A[p..q-1] and A[q+1..r] such that each element of A[p..q-1] is 
+less than or equal to A[q], which is, in turn, less than or equal to each element of A[q+1..r]. 
+2. **Conquer**: Sort the two subarrays A[p..q-1] and A[q+1..r] by recursive calls to quicksort
+3. **Combine**: Because subarrays are already sorted, no further work is needed to combine them: entire array A[p..r] is now sorted
+
+Algorithm (Introduction to Algorithms 3rd Edition - Cormen, Leiserson, Rivest, Stein):
+```
+/* p --> Starting index
+ r --> Ending index */
+QuickSort(A,p,r)
+  if p < r
+    q = Partition(A,p,r)
+    QuickSort(A,p,q-1)
+    QuickSort(A,q+1,r)
+```
+Initial call is QuckSort(A,1,A.length)
+
+Partition rearanges the subarray A[p..r] in place.
+```
+Partition(A,p,r)
+  x = A[r]
+  i = p - 1
+  for j = p to r - 1
+    if A[j] <= x
+      i = i + 1
+      exchange A[i] with A[j]
+  exchange A[i + 1] with A[r]
+  return i + 1
+```
